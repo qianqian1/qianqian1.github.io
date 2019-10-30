@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://qianqian1.github.io">
-  <title>Archives: 2019 | 迁迁的博客园</title>
+  <title>js高级 | 迁迁的博客园</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="迁迁的博客园">
-<meta property="og:url" content="https:&#x2F;&#x2F;qianqian1.github.io&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="数据类型分类：12基本类型：String Number boolean null undefined对象类型：Object Function(一种特别的对象，可以执行) Array（一种特别对象，有下标，内部数据有序）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js高级">
+<meta property="og:url" content="https:&#x2F;&#x2F;qianqian1.github.io&#x2F;2019&#x2F;10&#x2F;30&#x2F;js%E9%AB%98%E7%BA%A7&#x2F;index.html">
 <meta property="og:site_name" content="迁迁的博客园">
+<meta property="og:description" content="数据类型分类：12基本类型：String Number boolean null undefined对象类型：Object Function(一种特别的对象，可以执行) Array（一种特别对象，有下标，内部数据有序）">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-30T10:09:17.921Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="迁迁的博客园" type="application/atom+xml">
@@ -149,37 +152,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-js高级" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      js高级
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/js%E9%AB%98%E7%BA%A7/" class="archive-article-date">
+
+        
+        <a href="/2019/10/30/js%E9%AB%98%E7%BA%A7/" class="archive-article-date">
   	<time datetime="2019-10-30T08:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/30/js%E9%AB%98%E7%BA%A7/">js高级</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h6 id="分类："><a href="#分类：" class="headerlink" title="分类："></a>分类：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">基本类型：String Number boolean null undefined</span><br><span class="line">对象类型：Object Function(一种特别的对象，可以执行) Array（一种特别对象，有下标，内部数据有序）</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h6 id="判断："><a href="#判断：" class="headerlink" title="判断："></a>判断：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">typeof 返回数据类型的字符串表达  undefined，number，string，boolean，function，不能判断null和object；不能判断array和object</span><br><span class="line">instanceof   =&gt;  返回boolean值  判断对象的具体类型；</span><br><span class="line">  			   A instanceof B  判断A是否是B的实例；B为构造函数，A是对象实例</span><br><span class="line">   ===       =&gt;  undefined，null</span><br></pre></td></tr></table></figure>
+<h6 id="tips："><a href="#tips：" class="headerlink" title="tips："></a>tips：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1，undefined和null区别？</span><br><span class="line">	undefined定义未赋值，null定义了且赋值；</span><br><span class="line">2，什么时候给变量赋值为null？</span><br><span class="line">   var obj = null 初值赋值为null，表明将要赋值为对象</span><br><span class="line">   obj = [1,2,3]; // 确定对象就赋值</span><br><span class="line">   obj = null; //最后，让b指向的对象成为垃圾对象（被垃圾回收器回收）</span><br><span class="line">3，严格区分变量类型与数据类型？（了解）</span><br><span class="line">   变量类型：基本类型（保存基本类型的数据），引用类型（保存的是地址值）</span><br><span class="line">   数据类型（变量内存值的类型）：基本类型，对象类型</span><br></pre></td></tr></table></figure>
+<h6 id="数据-变量-内存"><a href="#数据-变量-内存" class="headerlink" title="数据/变量/内存"></a>数据/变量/内存</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1，什么是数据？</span><br><span class="line">  存储在内存中代表特定信息的‘xx’，本质上是0101......</span><br><span class="line">  数据特点：可传递，可运算</span><br><span class="line">  一切皆数据</span><br><span class="line">  内存中所有操作的目标：数据 算术，逻辑，赋值，运行函数</span><br><span class="line">2，什么是内存？</span><br><span class="line">  内存条通电后产生的可存储数据的空间（临时的）；</span><br><span class="line">  内存产生和死亡：内存条（电路板)-&gt;通电-&gt;产生内存空间-&gt;存储数据-&gt;处理数据-&gt;断电-&gt;内存空间和数据都消失</span><br><span class="line">  内存分类：堆（对象）、栈（全局变量/局部变量）</span><br><span class="line">3，什么是变量？</span><br><span class="line">  可变化的量，由变量名和变量值组成；</span><br><span class="line">  每个变量都对应一小块内存，变量名用来查找对应的内存，变量值就是内存中保存的数据</span><br><span class="line">4，内存，数据，变量的关系</span><br><span class="line">  内存用来存储数据的空间，变量是内存的标识，</span><br></pre></td></tr></table></figure>
+<h3 id="原型与原型链"><a href="#原型与原型链" class="headerlink" title="原型与原型链"></a>原型与原型链</h3><h6 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1，每个函数都有一个prototype属性，它默认指向一个Object空对象（原型对象）</span><br><span class="line">2，原型对象中有一个constructor属性，它指向函数对象</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1，给原型对象添加属性（一般是方法）</span><br><span class="line">	作用：函数的所有实例对象自动拥有原型中的属性（方法）</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">console.log(Date.prototype, typeof Date.prototype);</span><br><span class="line">function Fun()&#123;&#125;</span><br><span class="line">Fun.prototype.test = funtion () &#123; console.log(&apos;xxx&apos;)&#125;</span><br><span class="line">console.log(Fun.prototype);</span><br><span class="line">Date.prototype.constructor === Date</span><br><span class="line">var fun = new Fun();</span><br><span class="line">fun.test();</span><br></pre></td></tr></table></figure>
+<h6 id="显式原型和隐式原型"><a href="#显式原型和隐式原型" class="headerlink" title="显式原型和隐式原型"></a>显式原型和隐式原型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function Fn() &#123;&#125;  // 内部语句 this.prototype = &#123;&#125;</span><br><span class="line"></span><br><span class="line">1，每个函数function都有一个prototype，即显式原型属性，默认指向一个空的Object对象，函数定义时添加；</span><br><span class="line">console.log(Fn.prototype);</span><br><span class="line"></span><br><span class="line">2，每个实例对象都有一个__proto__，即隐式原型；创建对象时添加；</span><br><span class="line">var fn = new Fn(); //  内部语句 this.__proto__ = Fn.prototype;</span><br><span class="line">console.log(fn.__proto__);</span><br><span class="line"></span><br><span class="line">3，实例对象隐式原型的值为其对应构造函数的显式原型的值</span><br><span class="line">console.log(Fn.prototype === fn.__proto__); // true</span><br><span class="line"></span><br><span class="line">4，给原型添加方法</span><br><span class="line">Fun.prototype.test = funtion () &#123; console.log(&apos;xxx&apos;)&#125;</span><br><span class="line"></span><br><span class="line">5，通过实例对象调用原型的方法</span><br><span class="line">fun.test();</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -192,131 +223,104 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://qianqian1.github.io/2019/10/30/js%E9%AB%98%E7%BA%A7/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/%E7%94%9F%E6%B4%BB/" class="archive-article-date">
-  	<time datetime="2019-10-30T07:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/30/%E7%94%9F%E6%B4%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">身累可以休息，心累该在哪儿栖息？</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/30/%E7%94%9F%E6%B4%BB/">身累可以休息，心累该在哪儿栖息？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/git%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2019-10-30T06:22:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/30/git%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/">git命令总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/tech//" class="article-tag-list-link color5">tech</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-10-30T05:51:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/30/my-first-blog/">我的第一篇博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/jottings//" class="article-tag-list-link color4">jottings</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -339,8 +343,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
